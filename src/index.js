@@ -1,3 +1,8 @@
+// import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
