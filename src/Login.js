@@ -3,14 +3,14 @@ import React from 'react';
 export default function Login() {
     return (
 
-        <div class="row m-2" style={{height:"100vh",}}>
+        <div class="row m-2" style={{height:"100vh"}}>
         <div class="col md-6 mt-5" >
             
             <img src= "a.jpeg"></img>
         </div>
         <div class="col md-6">
         <div style={{height:"70%"}}>
-            <div class="border border-grey rounded p-3 d-flex justify-content-center" style={{ width:"25rem"}}>
+            <div class="border border-grey rounded p-3 d-flex justify-content-center" style={{ width:"25rem",background:"white"}}>
                 <div>
                     <h1>Portal</h1>
                     <br></br>
@@ -39,9 +39,9 @@ export default function Login() {
             </div>
         </div>
         <div style={{height:"30%"}}>
-        <div class="border border-grey rounded p-3 d-flex justify-content-center" style={{ width:"25rem"}}>
+        <div class="border border-grey rounded p-3 d-flex justify-content-center" style={{ width:"25rem",background:"white"}}>
                 <div>
-                Don't have an acount? <a href="">Sign up</a>    
+                Don't have an acount? <a href="/signup">Sign up</a>    
                 </div>
 
             </div>
