@@ -8,7 +8,9 @@ import {
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Student from "./Student";
+import ForgotPassword from "./ForgotPassword";
 import "./App.css";
+
 export default function App() {
   return (
     <div className = "App">
@@ -25,6 +27,8 @@ export default function App() {
           <Route path="/signup" element={<SignUp/>}>
           </Route>
           <Route path="/student" element={<Student/>}>
+          </Route>
+          <Route path="/forgot-password" element={<ForgotPassword/>}>
           </Route>
         </Routes>
       </div>

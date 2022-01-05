@@ -32,7 +32,7 @@ export default function Login() {
                     <button type='submit' class="rounded" style={{ width:"100%"}}>Sign in using Google</button>
                     <br />
                     <br />
-                    <a href='https://www.google.com/search?q=what+is+forgot+password&rlz=1C5CHFA_enIN985IN985&oq=what+is+forgot+&aqs=chrome.1.69i57j0i512l6j0i10i22i30l2j0i22i30.4746j0j7&sourceid=chrome&ie=UTF-8' target='_blank'>Forgot password?</a>
+                    <a href='/forgot-password'>Forgot password?</a>
                     
                     </div>
 
