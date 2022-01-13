@@ -5,10 +5,10 @@ import {
   Route,
 
 } from "react-router-dom";
-import Login from "./Login";
-import SignUp from "./SignUp";
-import Student from "./Student";
-import ForgotPassword from "./ForgotPassword";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
+import Student from "./Pages/Student";
+import ForgotPassword from "./Pages/ForgotPassword";
 import "./App.css";
 
 export default function App() {

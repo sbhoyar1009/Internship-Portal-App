@@ -8,7 +8,7 @@ export default function Student() {
   <thead >
     <tr>
       <th scope="col">Sr.No </th>
-      <th scope="col">Internship ID</th>
+      {/* <th scope="col">Internship ID</th> */}
       <th scope="col">Company Name</th>
       <th scope="col">Posted by</th>
       <th scope="col">Current Status</th>
@@ -21,7 +21,7 @@ export default function Student() {
       <th scope="row">1</th>
 
       <td>ABC Company</td>
-      <td>John Doe</td>
+      <td>Teacher John Doe</td>
       <td>Registerations open</td>
         <td>5.1.2022</td>
         <td><a href="/details">Click Here</a></td>
