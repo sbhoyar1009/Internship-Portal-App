@@ -10,14 +10,16 @@ import SignUp from "./Pages/SignUp";
 import Student from "./Pages/Student";
 import ForgotPassword from "./Pages/ForgotPassword";
 import "./App.css";
+import Details from "./Pages/Details";
+import NotFound from "./NotFound";
+import PostAnInternship from "./Pages/PostAnInternship";
 
 export default function App() {
   return (
     <div className = "App">
     <Router>
         <div class="p-3" >
-          <nav>
-          </nav>
+          
         </div>
         <div>
 
@@ -30,7 +32,15 @@ export default function App() {
           </Route>
           <Route path="/forgot-password" element={<ForgotPassword/>}>
           </Route>
-        </Routes>
+          <Route path="/details" element={<Details/>}>
+          </Route>
+          <Route path="/post-an-internship" element={<PostAnInternship/>}>
+          </Route>
+          <Route path="/*" element={<NotFound/>}>
+          </Route>
+          </Routes>
+          {/* <NotFound /> */}
+        
       </div>
     </Router>
     </div>
