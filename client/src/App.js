@@ -13,6 +13,8 @@ import "./App.css";
 import Details from "./Pages/Details";
 import NotFound from "./NotFound";
 import PostAnInternship from "./Pages/PostAnInternship";
+import Admin from "./Pages/Admin";
+import Edit from "./Pages/Edit";
 
 export default function App() {
   return (
@@ -32,9 +34,13 @@ export default function App() {
           </Route>
           <Route path="/forgot-password" element={<ForgotPassword/>}>
           </Route>
-          <Route path="/details" element={<Details/>}>
+          <Route path={"/details/:id"} element={<Details/>}>
           </Route>
           <Route path="/post-an-internship" element={<PostAnInternship/>}>
+          </Route>
+          <Route path="/admin" element={<Admin/>}>
+          </Route>
+          <Route path="/edit-existing-internship" element={<Edit/>}>
           </Route>
           <Route path="/*" element={<NotFound/>}>
           </Route>

@@ -4,14 +4,14 @@ export default function Header() {
     return (
         <nav>
             <div style={{float:"right",marginRight:"1rem"}}>
-            <button>
+            <span>
 Logout
-            </button>
+            </span>
             </div>
             <div style={{float:"right",marginRight:"1rem"}}>
-            <button>
+            <span>
 Username
-            </button>
+            </span>
             </div>
             <br />
             <hr />

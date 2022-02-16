@@ -6,6 +6,7 @@ const app = express()
 const port = 9000
 const User = require("./routes/User")
 const connectDB = require("./db");
+const Internship = require('./routes/Internship');
 
 app.use(express.static("Client/build"));
 app.use(cors());
@@ -34,6 +35,7 @@ app.use(function (req, res, next) {
 connectDB();
 
 app.use("/",User)
+app.use("/",Internship)
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

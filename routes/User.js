@@ -3,7 +3,7 @@ const router = express.Router({ mergeParams: true });
 const User = require("../models/User");
 
 router.post("/signup",(req,res)=>{
-let details  = req.body;
+let details  = req.body.details;
 console.log(details)
 let newUser = new User(details);
 newUser.save((err,r)=>{
@@ -13,7 +13,7 @@ newUser.save((err,r)=>{
     console.log(`User ${newUser.email} saved sucessfully`)
     }
 })
-User.save(details);
+
 })
 
 router.get("/users",(req,res)=>{

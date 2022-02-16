@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom';
+import { getAllInternships } from '../Utiles/Internship';
 import Header from './Header'
 
 export default function Student() {
+  const [internships,setInternships] = useState([]);
   const spaces = 5;
+
+  useEffect (() =>{
+          getAllInternships().then((res)=>{
+            setInternships(res.data);
+            console.log(res.data);
+          })
+  },[])
     return (
         // <div class=" d-flex justify-content-center" style={{width:"90%"}}> 
         <div>
@@ -22,34 +32,20 @@ export default function Student() {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>ABC Company</td>
-      <td>Teacher John Doe</td>
-      <td>Registerations open</td>
-        <td>5.1.2022</td>
-        <td><a href="/details">Click Here</a></td>
-        <td>Full Stack Developer</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>ABC Company</td>
-      <td>Teacher John Doe</td>
-      <td>Registerations open</td>
-        <td>5.1.2022</td>
-        <td><a href="/details">Click Here</a></td>
-        <td>Full Stack Developer</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>ABC Company</td>
-      <td>Teacher John Doe</td>
-      <td>Registerations open</td>
-        <td>5.1.2022</td>
-        <td><a href="/details">Click Here</a></td>
-        <td>Full Stack Developer</td>
-    </tr>
-
+    {internships.length>0?
+    internships.map((internship,index)=>{
+      {{console.log(internship.companyName)}}
+      return(
+        <tr>
+        <th scope="row">{index+1}</th>
+         <td>{internship.companyName}</td>
+         <td>Teacher John Doe</td>
+         <td>Registerations open</td>
+           <td>{new Date(internship.PostedAt).toLocaleDateString("en-US")}</td>
+           <td><Link to={"/details/"+(internship._id)}> Click Here</Link></td>
+           <td>AI/ML</td>
+       </tr>)
+    }):" Nothing to display"}
   </tbody>
 </table>
 </div>

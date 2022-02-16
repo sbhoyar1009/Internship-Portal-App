@@ -43,3 +43,7 @@
     transform: rotate(360deg);
   }
 }
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}

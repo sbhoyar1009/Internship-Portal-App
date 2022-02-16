@@ -3,11 +3,14 @@ import { useState } from 'react'
 import {Formik,Form,ErrorMessage,useField} from 'formik'; 
 import * as Yup from 'yup';
 import { TextField } from './TextField';
+import { Navigate } from 'react-router-dom';
+import {signup} from "../Utiles/Login";
+
 export default function SignUp() {
 
 const [details,setDetails] = useState({
     "email": "",
-    "mobileNo" : "",
+    "mobileno" : "",
     "password" : ""
 })
 
@@ -15,7 +18,7 @@ const validate = Yup.object({
     email: Yup.string()
       .email('Email is invalid')
       .required('Email is required'),
-      mobileNo : Yup.string()
+      mobileno : Yup.string()
       .max(10,"Mobile no must be a 10 digit no")
       .required("Mobile No is required"),
     password: Yup.string()
@@ -27,7 +30,15 @@ const validate = Yup.object({
   })
 
 const onSubmit = (e)=>{
+    e.preventDefault();
      console.log(details);
+     signup(details).then((res)=>{
+       console.log("User created successfully");
+     }).catch((err)=>{
+       console.log("some error occured")
+     })
+
+    //  <Navigate to="/login" />  
     // console.log("OnSubmit is called");
     
 }
@@ -42,7 +53,7 @@ const onSubmit = (e)=>{
                 <Formik
                 // initialValues={{
                 //     email:"",
-                //     mobileNo :"",
+                //     mobileno :"",
                 //     password : "",
                 //     confirmPassword : ""
                 // }}
@@ -62,17 +73,17 @@ const onSubmit = (e)=>{
 
                       }} />
                      
-                      <TextField placeholder="Enter your MobileNo" name="mobileNo" type="text" size="25"
+                      <TextField placeholder="Enter your mobileno" name="mobileno" type="text" size="25"
                       onChange={(e)=>{
                         // console.log(e.target.value);
-                        details.mobileNo = e.target.value;
+                        details.mobileno = e.target.value;
                     }}
                     />
         
                       <TextField placeholder="Enter password" name="password" type="password" size="25"
                     onChange={(e)=>{
                         // console.log(e.target.value);
-                        details.email = e.target.value;
+                        details.password = e.target.value;
                     }}
                     /> 
                    
